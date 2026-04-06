@@ -133,9 +133,13 @@ The exact timings depend on the machine and on Julia/TSSOS precompilation status
 In particular, the first run is often noticeably slower because package compilation is included.
 The SDP-related times reported in the summary are cumulative over all node relaxations in the whole Branch-and-Bound tree.
 
-## Illustration figure
+The figure below shows the first four branching iterations on the illustrative POP:
 
-The file `assets/example24_bab_iterations.pdf` shows the first four branching iterations on the illustrative POP:
+![CDK-guided Branch-and-Bound illustration](assets/example24_bab_iterations_preview.png)
+
+The vector version is available in `assets/example24_bab_iterations.pdf`.
+
+It displays:
 
 - the current feasible node box,
 - the CDK-guided branching decision,
