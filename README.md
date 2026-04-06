@@ -4,9 +4,9 @@ This folder contains a minimal GitHub-facing bundle for the CDK-guided Branch-an
 
 The goal of the method is to solve a general Polynomial Optimization Problem (POP)
 
-\[
+$$
 \min_{x \in K} f(x),
-\]
+$$
 
 where `f` is a polynomial and `K` is described by polynomial inequality and equality constraints together with box bounds. At each node of the Branch-and-Bound tree, the code solves a fixed-order Moment-SOS relaxation, extracts marginal Christoffel-Darboux kernel (CDK) information from the pseudo-moments, and uses that information to:
 
@@ -53,7 +53,7 @@ Pkg.add(["JuMP", "DynamicPolynomials", "MultivariatePolynomials", "TSSOS", "Ipop
 
 As a concrete illustration, we consider the following nonconvex quadratic POP:
 
-\[
+$$
 \begin{aligned}
 \min_{x \in K} \quad & -(x_1 - 1)^2 - (x_1 - x_2)^2 - (x_2 - 3)^2,\\
 \text{s.t.} \quad
@@ -62,13 +62,13 @@ As a concrete illustration, we consider the following nonconvex quadratic POP:
 & 1 - (x_2 - 3)^2 \ge 0,\\
 & x_1 - 0.3 x_2^2 \ge 0,
 \end{aligned}
-\]
+$$
 
 with box bounds
 
-\[
+$$
 x_1 \in [0, 2], \qquad x_2 \in [2, 4].
-\]
+$$
 
 For this instance, the global optimizer is `(2, 2)` and the optimal value is `-2`.
 
