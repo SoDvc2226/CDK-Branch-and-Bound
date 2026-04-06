@@ -1,8 +1,8 @@
-# CDK-Guided Branch-and-Bound for Polynomial Optimization
+# CDK-Guided Branch-and-Bound for Polynomial Optimization (POP)
 
-This folder contains a minimal GitHub-facing bundle for the CDK-guided Branch-and-Bound code developed in `BaBEXPs`.
+This folder contains the code necessary for running the CDK-guided Branch-and-Bound algorithm on general POP instances.
 
-The goal of the method is to solve a general Polynomial Optimization Problem (POP)
+The goal of the method is to solve a general POP
 
 $$
 \min_{x \in K} f(x),
@@ -23,8 +23,6 @@ res = branch_and_bound(inst; kwargs...)
 where `inst` is a POP object containing the polynomial objective, polynomial constraints, and box bounds.
 
 ## Folder contents
-
-- `pop_bab_api.jl`: small GitHub-facing shim exposing generic names such as `branch_and_bound` and `POPInstance`
 - `run_example24.jl`: runnable driver script
 - `example24_instance.jl`: explicit construction of a small illustrative POP
 - `src/fem_bab_bridge.jl`: main Branch-and-Bound implementation
