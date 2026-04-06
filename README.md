@@ -116,7 +116,7 @@ The most important optional parameters are the following.
 ## Expected output
 
 The script prints the iteration-by-iteration Branch-and-Bound trace and then a final summary.
-For the POP above, the first-order CDK/CDK configuration closes the tree in four branching iterations.
+For the POP above, the first-order CDK-BaB configuration closes the tree in four branching iterations.
 A representative final summary is:
 
 ```text
